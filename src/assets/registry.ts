@@ -31,7 +31,10 @@ export class AssetRegistry {
     if (!asset.version.trim()) throw new Error(`Asset ${asset.id} requires a version`);
     if (!asset.uri.trim()) throw new Error(`Asset ${asset.id} requires a uri`);
     if (this.assets.has(asset.id)) throw new Error(`Asset already registered: ${asset.id}`);
-    this.assets.set(asset.id, { ...asset, tags: asset.tags ? [...asset.tags] : undefined });
+
+    const stored: AssetRecord = { ...asset };
+    if (asset.tags !== undefined) stored.tags = [...asset.tags];
+    this.assets.set(asset.id, stored);
   }
 
   require(id: string): AssetRecord {
