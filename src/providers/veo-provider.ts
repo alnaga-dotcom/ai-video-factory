@@ -122,7 +122,7 @@ async function toVeoReferenceImage(asset: AssetRecord): Promise<unknown> {
 }
 
 function mimeFromUri(uri: string): string {
-  const clean = uri.toLowerCase().split("?")[0];
+  const clean = uri.toLowerCase().split("?", 1)[0] ?? uri.toLowerCase();
   if (clean.endsWith(".jpg") || clean.endsWith(".jpeg")) return "image/jpeg";
   if (clean.endsWith(".webp")) return "image/webp";
   return "image/png";
