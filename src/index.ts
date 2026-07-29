@@ -5,6 +5,8 @@ export * from "./qa/policy.js";
 export * from "./providers/video-provider.js";
 export * from "./characters/registry.js";
 export * from "./assets/registry.js";
+export * from "./storage/storage-provider.js";
+export * from "./storage/bunny-storage-provider.js";
 export * from "./config/models.js";
 export * from "./orchestration/factory.js";
 export * from "./prompts/default-builder.js";
