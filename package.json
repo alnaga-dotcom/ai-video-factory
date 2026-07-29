@@ -13,6 +13,7 @@
     "asset:publish-folder": "npm run build && node scripts/asset-publish-folder.mjs",
     "asset:review": "node scripts/asset-review.mjs",
     "asset:promote": "node scripts/asset-promote.mjs",
+    "generated:approve": "node scripts/generated-asset-approve.mjs",
     "sabra:dry-run": "npm run build && node scripts/sabra-dry-run.mjs",
     "gemini:test": "node scripts/gemini-connectivity-test.mjs",
     "sabra:veo-dry-run": "npm run build && node scripts/sabra-veo-payload-dry-run.mjs",
