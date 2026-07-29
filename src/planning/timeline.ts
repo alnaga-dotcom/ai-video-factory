@@ -28,10 +28,9 @@ export function planTimeline(input: TimelineInput): TimelinePlan {
   const reusableSeconds = introSeconds + titleCardSeconds;
   if (reusableSeconds >= targetSeconds) throw new Error("reusable timeline segments must leave time for generated story content");
   const generatedStorySeconds = targetSeconds - reusableSeconds;
-  const segments: TimelineSegment[] = [
-    { kind: "intro", durationSeconds: introSeconds, generationRequired: false },
-    { kind: "title-card", durationSeconds: titleCardSeconds, generationRequired: false },
-    { kind: "generated-story", durationSeconds: generatedStorySeconds, generationRequired: true },
-  ].filter((segment) => segment.durationSeconds > 0);
+  const segments: TimelineSegment[] = [];
+  if (introSeconds > 0) segments.push({ kind: "intro", durationSeconds: introSeconds, generationRequired: false });
+  if (titleCardSeconds > 0) segments.push({ kind: "title-card", durationSeconds: titleCardSeconds, generationRequired: false });
+  if (generatedStorySeconds > 0) segments.push({ kind: "generated-story", durationSeconds: generatedStorySeconds, generationRequired: true });
   return { targetSeconds, introSeconds, titleCardSeconds, generatedStorySeconds, reusableSeconds, segments };
 }
