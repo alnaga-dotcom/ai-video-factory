@@ -19,7 +19,8 @@
     "sabra:veo-dry-run": "npm run build && node scripts/sabra-veo-payload-dry-run.mjs",
     "sabra:veo-generate": "npm run build && node scripts/sabra-veo-generate.mjs",
     "video:preserve": "npm run build && node scripts/preserve-gemini-video.mjs",
-    "ep001:dry-run": "npm run build && node scripts/ep001-dry-run.mjs"
+    "ep001:dry-run": "npm run build && node scripts/ep001-dry-run.mjs",
+    "milestone:dry-run": "npm run build && node scripts/milestone-dry-run.mjs"
   },
   "dependencies": {
     "@google/genai": "^1.0.0"
