@@ -3,3 +3,7 @@ export * from "./ease/normalize.js";
 export * from "./routing/model-router.js";
 export * from "./qa/policy.js";
 export * from "./providers/video-provider.js";
+export * from "./characters/registry.js";
+export * from "./config/models.js";
+export * from "./orchestration/factory.js";
+export * from "./prompts/default-builder.js";
