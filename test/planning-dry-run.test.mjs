@@ -14,6 +14,8 @@ test("routes and costs a planned 30 second production without generation", () =>
   assert.equal(report.totalSeconds, 30);
   assert.equal(report.shots[0].tier, "fast");
   assert.equal(report.shots[1].tier, "premium");
-  assert.equal(report.estimatedCredits, 53);
+  assert.deepEqual(report.shots.map((shot) => shot.durationSeconds), [8, 8, 7, 7]);
+  assert.deepEqual(report.shots.map((shot) => shot.estimatedCredits), [8, 16, 14, 14]);
+  assert.equal(report.estimatedCredits, 52);
   assert.match(report.shots[0].prompt, /Preserve exact character identity/);
 });
