@@ -8,7 +8,8 @@
     "typecheck": "tsc --noEmit",
     "build": "tsc -p tsconfig.json",
     "test": "npm run build && node --test test/**/*.test.mjs",
-    "check": "npm run typecheck && npm test"
+    "check": "npm run typecheck && npm test",
+    "storage:test": "npm run build && node scripts/storage-test.mjs"
   },
   "devDependencies": {
     "typescript": "^5.9.0"
