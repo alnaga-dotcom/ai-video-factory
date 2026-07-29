@@ -1,5 +1,6 @@
 import type { EpisodeSpec, ProductionStatus, ShotSpec } from "../domain/contracts.js";
 import type { CharacterRegistry } from "../characters/registry.js";
+import type { AssetRegistry, AssetRole } from "../assets/registry.js";
 import type { FactoryModelConfig } from "../config/models.js";
 import { selectConfiguredModel } from "../config/models.js";
 import { routeShot } from "../routing/model-router.js";
@@ -16,6 +17,8 @@ export interface QaEvaluator {
 
 export interface FactoryDependencies {
   characters: CharacterRegistry;
+  assets?: AssetRegistry;
+  worldId?: string;
   models: FactoryModelConfig;
   providers: Map<string, VideoProvider>;
   prompts: PromptBuilder;
@@ -66,6 +69,32 @@ function appendCorrection(basePrompt: string, correctiveInstruction?: string): s
   return correctiveInstruction ? `${basePrompt}\n\nCORRECTION:\n${correctiveInstruction}` : basePrompt;
 }
 
+function rolesForShot(shot: ShotSpec): AssetRole[] {
+  const roles: AssetRole[] = ["FACE_IDENTITY", "BODY_IDENTITY", "COSTUME"];
+  if (shot.kind === "dialogue" || shot.kind === "reaction" || shot.emotionalIntent) roles.push("EXPRESSION");
+  if (shot.kind === "interaction") roles.push("ACTION");
+  if (shot.kind === "character" || shot.kind === "establishing") roles.push("PROPORTIONS");
+  return [...new Set(roles)];
+}
+
+function resolveReferenceAssetIds(shot: ShotSpec, deps: FactoryDependencies): string[] {
+  if (!deps.assets || !deps.worldId) return deps.characters.resolveAssets(shot.characters);
+
+  const roles = rolesForShot(shot);
+  const resolved = shot.characters.flatMap((characterId) =>
+    deps.assets!.resolveReferences({
+      worldId: deps.worldId!,
+      characterId,
+      roles,
+      includeSupporting: true,
+      maxPerRole: 2,
+    }),
+  );
+
+  const ids = [...new Set(resolved.map((asset) => asset.id))];
+  return ids.length > 0 ? ids : deps.characters.resolveAssets(shot.characters);
+}
+
 async function generateShot(
   shot: ShotSpec,
   deps: FactoryDependencies,
@@ -80,7 +109,7 @@ async function generateShot(
     shot,
     prompt: appendCorrection(deps.prompts.build(shot), correctiveInstruction),
     modelTier: route.tier,
-    referenceAssetIds: deps.characters.resolveAssets(shot.characters),
+    referenceAssetIds: resolveReferenceAssetIds(shot, deps),
   });
 
   return { shot, generation, routeReason: route.reason };
@@ -111,19 +140,12 @@ export async function produceShotWithQa(
     if (correctiveInstruction !== undefined) attemptRecord.correctiveInstruction = correctiveInstruction;
     attempts.push(attemptRecord);
 
-    if (!qa) {
-      return summarizeShot(shot, "approved", attempts, []);
-    }
+    if (!qa) return summarizeShot(shot, "approved", attempts, []);
 
     const decision = decideRetry(qa);
-    if (!decision.retry) {
-      return summarizeShot(shot, "approved", attempts, []);
-    }
+    if (!decision.retry) return summarizeShot(shot, "approved", attempts, []);
 
-    if (attempt > maxRetries) {
-      return summarizeShot(shot, "director-review", attempts, decision.failedCriteria);
-    }
-
+    if (attempt > maxRetries) return summarizeShot(shot, "director-review", attempts, decision.failedCriteria);
     correctiveInstruction = decision.correctiveInstruction;
   }
 
