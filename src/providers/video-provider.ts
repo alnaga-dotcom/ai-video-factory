@@ -1,3 +1,4 @@
+import type { AssetRecord } from "../assets/registry.js";
 import type { ShotSpec } from "../domain/contracts.js";
 import type { ModelTier } from "../routing/model-router.js";
 
@@ -6,6 +7,7 @@ export interface GenerationRequest {
   prompt: string;
   modelTier: ModelTier;
   referenceAssetIds: string[];
+  referenceAssets?: AssetRecord[];
 }
 
 export interface GenerationResult {
