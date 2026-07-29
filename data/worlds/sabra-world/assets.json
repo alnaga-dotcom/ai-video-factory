@@ -1,0 +1,48 @@
+{
+  "version": "1.0",
+  "worldId": "sabra-world",
+  "assets": [
+    {
+      "id": "sabra-face-master",
+      "worldId": "sabra-world",
+      "kind": "image",
+      "status": "CANDIDATE",
+      "version": "1.0.0",
+      "uri": "asset://sabra-world/characters/sabra/face-master",
+      "characterId": "sabra",
+      "tags": ["identity", "face", "master"],
+      "notes": "Reserved canonical identity slot. Promote to CANON only after the approved source file is registered with its final storage URI and SHA-256."
+    },
+    {
+      "id": "sabra-full-body-master",
+      "worldId": "sabra-world",
+      "kind": "image",
+      "status": "CANDIDATE",
+      "version": "1.0.0",
+      "uri": "asset://sabra-world/characters/sabra/full-body-master",
+      "characterId": "sabra",
+      "tags": ["identity", "full-body", "master"],
+      "notes": "Placeholder registry record only; not production-authorized until explicitly approved and hashed."
+    },
+    {
+      "id": "sabra-world-logo-master",
+      "worldId": "sabra-world",
+      "kind": "logo",
+      "status": "CANDIDATE",
+      "version": "1.0.0",
+      "uri": "asset://sabra-world/brand/logo-master",
+      "tags": ["brand", "logo", "master"],
+      "notes": "Approved design direction exists, but the source asset must be registered before CANON promotion."
+    },
+    {
+      "id": "sabra-world-theme-master",
+      "worldId": "sabra-world",
+      "kind": "audio",
+      "status": "CANDIDATE",
+      "version": "1.0.0",
+      "uri": "asset://sabra-world/audio/theme-master",
+      "tags": ["brand", "music", "theme", "master"],
+      "notes": "Reserved for the approved theme audio. Final file location and SHA-256 are still required."
+    }
+  ]
+}
