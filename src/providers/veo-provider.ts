@@ -47,8 +47,8 @@ export class VeoVideoProvider implements VideoProvider {
     return {
       provider: this.name,
       model: this.model,
-      externalJobId: operation.name,
-      videoUrl: uri,
+      assetId: uri,
+      durationSeconds: request.shot.durationSeconds,
     };
   }
 
