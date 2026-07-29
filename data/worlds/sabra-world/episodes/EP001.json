@@ -1,0 +1,54 @@
+{
+  "id": "EP001",
+  "title": "صباح صَبْرة",
+  "language": "ar-EG",
+  "productionMode": "shot-by-shot",
+  "baseline": {
+    "model": "veo-3.1-generate-preview",
+    "durationSeconds": 8,
+    "aspectRatio": "16:9",
+    "resolution": "720p",
+    "identityPolicy": "Use Sabra CANON face, body and costume references. Preserve identity and natural realism."
+  },
+  "scenes": [
+    {
+      "id": "ep001-scene-01",
+      "location": "Sabra's outdoor home environment",
+      "timeOfDay": "early morning",
+      "shots": [
+        {
+          "id": "shot-1",
+          "sceneId": "ep001-scene-01",
+          "kind": "establishing",
+          "durationSeconds": 8,
+          "characters": ["sabra"],
+          "action": "A calm early morning begins around Sabra's outdoor home. Sabra steps naturally into the space and starts her morning routine with quiet confidence.",
+          "emotionalIntent": "warm, peaceful, welcoming",
+          "status": "planned"
+        },
+        {
+          "id": "shot-2",
+          "sceneId": "ep001-scene-01",
+          "kind": "interaction",
+          "durationSeconds": 8,
+          "characters": ["sabra"],
+          "action": "Sabra prepares a simple morning drink at the outdoor kitchen, handling the cup and nearby objects naturally and carefully.",
+          "emotionalIntent": "focused, comfortable, natural",
+          "continuityFrom": "shot-1",
+          "status": "planned"
+        },
+        {
+          "id": "shot-3",
+          "sceneId": "ep001-scene-01",
+          "kind": "character",
+          "durationSeconds": 8,
+          "characters": ["sabra"],
+          "action": "Sabra pauses with the finished drink, looks toward the morning around her, then gives a subtle satisfied smile.",
+          "emotionalIntent": "content, warm, understated",
+          "continuityFrom": "shot-2",
+          "status": "planned"
+        }
+      ]
+    }
+  ]
+}
