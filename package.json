@@ -9,7 +9,8 @@
     "build": "tsc -p tsconfig.json",
     "test": "npm run build && node --test test/**/*.test.mjs",
     "check": "npm run typecheck && npm test",
-    "storage:test": "npm run build && node scripts/storage-test.mjs"
+    "storage:test": "npm run build && node scripts/storage-test.mjs",
+    "asset:publish-folder": "npm run build && node scripts/asset-publish-folder.mjs"
   },
   "devDependencies": {
     "typescript": "^5.9.0"
