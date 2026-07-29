@@ -4,17 +4,19 @@ export interface TimelineInput {
   titleCardSeconds?: number;
 }
 
+type TimelineSegment = {
+  kind: "intro" | "title-card" | "generated-story";
+  durationSeconds: number;
+  generationRequired: boolean;
+};
+
 export interface TimelinePlan {
   targetSeconds: number;
   introSeconds: number;
   titleCardSeconds: number;
   generatedStorySeconds: number;
   reusableSeconds: number;
-  segments: Array<{
-    kind: "intro" | "title-card" | "generated-story";
-    durationSeconds: number;
-    generationRequired: boolean;
-  }>;
+  segments: TimelineSegment[];
 }
 
 export function planTimeline(input: TimelineInput): TimelinePlan {
@@ -26,16 +28,10 @@ export function planTimeline(input: TimelineInput): TimelinePlan {
   const reusableSeconds = introSeconds + titleCardSeconds;
   if (reusableSeconds >= targetSeconds) throw new Error("reusable timeline segments must leave time for generated story content");
   const generatedStorySeconds = targetSeconds - reusableSeconds;
-  return {
-    targetSeconds,
-    introSeconds,
-    titleCardSeconds,
-    generatedStorySeconds,
-    reusableSeconds,
-    segments: [
-      { kind: "intro", durationSeconds: introSeconds, generationRequired: false },
-      { kind: "title-card", durationSeconds: titleCardSeconds, generationRequired: false },
-      { kind: "generated-story", durationSeconds: generatedStorySeconds, generationRequired: true },
-    ].filter((segment) => segment.durationSeconds > 0),
-  };
+  const segments: TimelineSegment[] = [
+    { kind: "intro", durationSeconds: introSeconds, generationRequired: false },
+    { kind: "title-card", durationSeconds: titleCardSeconds, generationRequired: false },
+    { kind: "generated-story", durationSeconds: generatedStorySeconds, generationRequired: true },
+  ].filter((segment) => segment.durationSeconds > 0);
+  return { targetSeconds, introSeconds, titleCardSeconds, generatedStorySeconds, reusableSeconds, segments };
 }
