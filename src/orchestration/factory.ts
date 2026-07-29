@@ -1,6 +1,6 @@
 import type { EpisodeSpec, ProductionStatus, ShotSpec } from "../domain/contracts.js";
 import type { CharacterRegistry } from "../characters/registry.js";
-import type { AssetRegistry, AssetRole } from "../assets/registry.js";
+import type { AssetRecord, AssetRegistry, AssetRole } from "../assets/registry.js";
 import type { FactoryModelConfig } from "../config/models.js";
 import { selectConfiguredModel } from "../config/models.js";
 import { routeShot } from "../routing/model-router.js";
@@ -77,11 +77,10 @@ function rolesForShot(shot: ShotSpec): AssetRole[] {
   return [...new Set(roles)];
 }
 
-function resolveReferenceAssetIds(shot: ShotSpec, deps: FactoryDependencies): string[] {
-  if (!deps.assets || !deps.worldId) return deps.characters.resolveAssets(shot.characters);
-
+function resolveReferenceAssets(shot: ShotSpec, deps: FactoryDependencies): AssetRecord[] {
+  if (!deps.assets || !deps.worldId) return [];
   const roles = rolesForShot(shot);
-  const resolved = shot.characters.flatMap((characterId) =>
+  return shot.characters.flatMap((characterId) =>
     deps.assets!.resolveReferences({
       worldId: deps.worldId!,
       characterId,
@@ -90,9 +89,6 @@ function resolveReferenceAssetIds(shot: ShotSpec, deps: FactoryDependencies): st
       maxPerRole: 2,
     }),
   );
-
-  const ids = [...new Set(resolved.map((asset) => asset.id))];
-  return ids.length > 0 ? ids : deps.characters.resolveAssets(shot.characters);
 }
 
 async function generateShot(
@@ -105,11 +101,16 @@ async function generateShot(
   const provider = deps.providers.get(model.provider);
   if (!provider) throw new Error(`Provider not registered: ${model.provider}`);
 
+  const referenceAssets = resolveReferenceAssets(shot, deps);
+  const semanticIds = [...new Set(referenceAssets.map((asset) => asset.id))];
+  const referenceAssetIds = semanticIds.length > 0 ? semanticIds : deps.characters.resolveAssets(shot.characters);
+
   const generation = await provider.generate({
     shot,
     prompt: appendCorrection(deps.prompts.build(shot), correctiveInstruction),
     modelTier: route.tier,
-    referenceAssetIds: resolveReferenceAssetIds(shot, deps),
+    referenceAssetIds,
+    ...(referenceAssets.length > 0 ? { referenceAssets } : {}),
   });
 
   return { shot, generation, routeReason: route.reason };
