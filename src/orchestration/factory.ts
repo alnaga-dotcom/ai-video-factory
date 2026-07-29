@@ -106,7 +106,10 @@ export async function produceShotWithQa(
       ? await deps.qa.evaluate(withStatus(shot, "qa"), generated.generation)
       : undefined;
 
-    attempts.push({ ...generated, attempt, qa, correctiveInstruction });
+    const attemptRecord: ShotAttempt = { ...generated, attempt };
+    if (qa !== undefined) attemptRecord.qa = qa;
+    if (correctiveInstruction !== undefined) attemptRecord.correctiveInstruction = correctiveInstruction;
+    attempts.push(attemptRecord);
 
     if (!qa) {
       return summarizeShot(shot, "approved", attempts, []);
