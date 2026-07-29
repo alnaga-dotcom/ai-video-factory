@@ -19,6 +19,7 @@
     "audio:cast-sabra": "node scripts/sabra-voice-cast.mjs",
     "ep001:audio": "node scripts/ep001-audio.mjs",
     "ep001:visual-plan": "node scripts/ep001-visual-plan.mjs",
+    "ep001:produce": "npm run build && node scripts/ep001-produce.mjs",
     "sabra:dry-run": "npm run build && node scripts/sabra-dry-run.mjs",
     "gemini:test": "node scripts/gemini-connectivity-test.mjs",
     "sabra:veo-dry-run": "npm run build && node scripts/sabra-veo-payload-dry-run.mjs",
