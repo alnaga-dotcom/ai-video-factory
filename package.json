@@ -10,7 +10,8 @@
     "test": "npm run build && node --test test/**/*.test.mjs",
     "check": "npm run typecheck && npm test",
     "storage:test": "npm run build && node scripts/storage-test.mjs",
-    "asset:publish-folder": "npm run build && node scripts/asset-publish-folder.mjs"
+    "asset:publish-folder": "npm run build && node scripts/asset-publish-folder.mjs",
+    "asset:review": "node scripts/asset-review.mjs"
   },
   "devDependencies": {
     "typescript": "^5.9.0"
