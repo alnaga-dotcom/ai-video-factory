@@ -14,7 +14,8 @@
     "asset:review": "node scripts/asset-review.mjs",
     "asset:promote": "node scripts/asset-promote.mjs",
     "sabra:dry-run": "npm run build && node scripts/sabra-dry-run.mjs",
-    "gemini:test": "node scripts/gemini-connectivity-test.mjs"
+    "gemini:test": "node scripts/gemini-connectivity-test.mjs",
+    "sabra:veo-dry-run": "npm run build && node scripts/sabra-veo-payload-dry-run.mjs"
   },
   "devDependencies": {
     "@types/node": "^24.0.0",
