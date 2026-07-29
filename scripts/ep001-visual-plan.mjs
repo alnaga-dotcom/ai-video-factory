@@ -1,0 +1,39 @@
+import { mkdir, writeFile } from "node:fs/promises";
+import { resolve } from "node:path";
+
+const outDir = resolve("staging/sabra-world/episodes/EP001/visual");
+await mkdir(outDir, { recursive: true });
+
+const plan = {
+  episode: "EP001",
+  world: "sabra-world",
+  status: "VISUAL_PLAN",
+  generationSpend: 0,
+  timelineAuthority: "approved EP001 segmented narration",
+  productionMode: "mass-production-ready",
+  scenes: [
+    { id: "S01", audio: ["01-introduction"], role: "character-critical", route: "CANON_REFERENCE_REQUIRED", concept: "Present-day Sabra at her village home turns naturally toward camera and introduces herself. Warm Egyptian rural home, cinematic realism, lively intimate energy; no presenter staging." },
+    { id: "S02", audio: ["02-origin"], role: "memory-montage", route: "VISUAL_FREEDOM", concept: "Upper Egypt memory montage: Nile light, agricultural fields, village lanes, family-home details, childhood atmosphere. Evoke Sabra's roots without requiring a direct identifiable younger likeness." },
+    { id: "S03", audio: ["03-marriage"], role: "memory-transition", route: "CONTROLLED_CHARACTER_REFERENCES", concept: "Young married couple beginning life together and moving toward villages south of Giza; respectful Egyptian rural realism, symbolic journey, household beginnings, no celebrity likeness." },
+    { id: "S04", audio: ["04-life", "05-years"], role: "life-montage", route: "MIXED", concept: "Years of family life: Nile water, fertile land, home cooking, children growing, work, celebrations, ordinary hardship and laughter. Present-day Sabra may anchor selected shots while montage carries passage of time." },
+    { id: "S05", audio: ["06-promise", "07-slogan"], role: "character-critical", route: "CANON_REFERENCE_REQUIRED", concept: "Present-day Sabra in her home environment, expressive and naturally witty, promising authentic stories and food. Strong character performance, restrained gestures, cinematic close/medium coverage." },
+    { id: "S06", audio: ["08-next"], role: "character-critical-closing", route: "CANON_REFERENCE_REQUIRED", concept: "Sabra closes directly and warmly with playful promise that the story is only beginning; finish on a clean visual beat suitable for deterministic Sabra World branding/outro." }
+  ],
+  rules: {
+    preserveCanonIntro: true,
+    regenerateIntro: false,
+    parallelizeIndependentScenes: true,
+    retryFailedShotsIndividually: true,
+    audioMustNotBeRegenerated: true,
+    finalMusicAndLoudnessInMastering: true,
+    directSabraShotsRequireCanonReferences: true
+  }
+};
+
+const path = resolve(outDir, "EP001-visual-plan.json");
+await writeFile(path, JSON.stringify(plan, null, 2) + "\n", "utf8");
+console.log("EP001 VISUAL PLAN PASS");
+console.log("6 scenes | timeline authority: approved audio | generation spend $0");
+for (const s of plan.scenes) console.log(`${s.id} | ${s.role} | ${s.route} | audio ${s.audio.join(", ")}`);
+console.log(`PLAN ${path}`);
+console.log("NEXT GATE: generation orchestrator may spend Gemini/Veo credits");
