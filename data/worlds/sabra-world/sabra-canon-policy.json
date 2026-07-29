@@ -1,0 +1,26 @@
+{
+  "version": "1.0.0",
+  "worldId": "sabra-world",
+  "characterId": "sabra",
+  "rules": [
+    { "match": "Sabra_Face_Closeup_Front_Master_v1.png", "status": "CANON", "canonTier": "PRIMARY", "role": "FACE_IDENTITY" },
+    { "match": "Sabra_Portrait_Front_Master_v1.png", "status": "CANON", "canonTier": "PRIMARY", "role": "FACE_IDENTITY" },
+    { "match": "Sabra_Portrait_45L_Master_v1.png", "status": "CANON", "canonTier": "PRIMARY", "role": "FACE_IDENTITY" },
+    { "match": "Sabra_Portrait_45R_Master_v1.png", "status": "CANON", "canonTier": "PRIMARY", "role": "FACE_IDENTITY" },
+    { "match": "Sabra_FullBody_Turnaround_Master_v1.png", "status": "CANON", "canonTier": "PRIMARY", "role": "BODY_IDENTITY" },
+    { "match": "Sabra_Costume_Details_Master_v1.png", "status": "CANON", "canonTier": "PRIMARY", "role": "COSTUME" },
+    { "match": "Sabra_Scale_Proportions_Master_v1.png", "status": "CANON", "canonTier": "PRIMARY", "role": "PROPORTIONS" },
+    { "match": "Sabra_Master_Reference_Sheet_v1.1.png", "status": "CANON", "canonTier": "PRIMARY", "role": "BODY_IDENTITY" },
+
+    { "match": "Sabra_Expressions_Reference_v1.png", "status": "CANON", "canonTier": "SUPPORTING", "role": "EXPRESSION" },
+    { "match": "Sabra_Natural_Poses_Reference_v1.png", "status": "CANON", "canonTier": "SUPPORTING", "role": "POSE" },
+    { "match": "Sabra_Outdoor_Kitchen_Action_Reference_v1.png", "status": "CANON", "canonTier": "SUPPORTING", "role": "ACTION" },
+    { "match": "Sabra_Field_FullBody_Master_v1.png", "status": "CANON", "canonTier": "SUPPORTING", "role": "BODY_IDENTITY" },
+    { "match": "Sabra_Hands_Nails_Master_Reference_v1.png", "status": "CANON", "canonTier": "SUPPORTING", "role": "DETAIL" },
+
+    { "match": "Sabra_Master_Reference_Sheet_v1.png", "status": "RETIRED", "role": "BODY_IDENTITY", "reason": "Binary duplicate of v1.1; retained in storage but excluded logically." },
+    { "match": "RefrencesSabra_Field_FullBody_Master_v1.png", "status": "CANDIDATE", "role": "BODY_IDENTITY", "reason": "Variant requires visual review against the selected field master." },
+    { "match": "Sabra_Hands_Nails_Master_Reference_v1 (2).png", "status": "CANDIDATE", "role": "DETAIL", "reason": "Variant requires visual review against the selected hands master." },
+    { "match": "Logo.png", "status": "CANDIDATE", "role": "BRAND", "reason": "Brand asset; must be migrated out of the character identity namespace." }
+  ]
+}
