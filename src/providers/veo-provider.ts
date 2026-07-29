@@ -55,7 +55,8 @@ export class VeoVideoProvider implements VideoProvider {
           aspectRatio: "16:9",
           resolution: "720p",
           durationSeconds: request.shot.durationSeconds,
-          sampleCount: 1,
+          numberOfVideos: 1,
+          personGeneration: "allow_adult",
         },
       },
     };
@@ -69,7 +70,9 @@ export class VeoVideoProvider implements VideoProvider {
     const completed = await this.waitForOperation(operation.name);
     const sample = completed?.response?.generateVideoResponse?.generatedSamples?.[0];
     const uri = sample?.video?.uri;
-    if (typeof uri !== "string" || !uri) throw new Error("Veo completed without a generated video URI");
+    if (typeof uri !== "string" || !uri) {
+      throw new Error(`Veo completed without a generated video URI. Final operation: ${JSON.stringify(completed)}`);
+    }
 
     return {
       provider: this.name,
@@ -116,8 +119,13 @@ async function toVeoReferenceImage(asset: AssetRecord): Promise<unknown> {
   if (!mimeType.startsWith("image/")) throw new Error(`Reference asset ${asset.id} is not an image: ${mimeType}`);
   const bytes = Buffer.from(await response.arrayBuffer());
   return {
+    image: {
+      inlineData: {
+        mimeType,
+        data: bytes.toString("base64"),
+      },
+    },
     referenceType: "asset",
-    image: { bytesBase64Encoded: bytes.toString("base64"), mimeType },
   };
 }
 
