@@ -18,6 +18,9 @@
     "sabra:veo-dry-run": "npm run build && node scripts/sabra-veo-payload-dry-run.mjs",
     "sabra:veo-generate": "npm run build && node scripts/sabra-veo-generate.mjs"
   },
+  "dependencies": {
+    "@google/genai": "^1.0.0"
+  },
   "devDependencies": {
     "@types/node": "^24.0.0",
     "typescript": "^5.9.0"
