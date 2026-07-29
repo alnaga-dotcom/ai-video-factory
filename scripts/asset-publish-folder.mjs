@@ -54,10 +54,14 @@ function contentType(ext) {
   })[ext] ?? "application/octet-stream";
 }
 
-const [sourceArg, worldId = "sabra-world", characterId = "sabra"] = process.argv.slice(2);
-if (!sourceArg) throw new Error('Usage: npm run asset:publish-folder -- "A:\\Sabra World\\01_Characters\\Sabra" [worldId] [characterId]');
-
 await loadEnv();
+
+const [cliSourceArg, worldId = "sabra-world", characterId = "sabra"] = process.argv.slice(2);
+const sourceArg = process.env.SABRA_ASSET_PATH?.trim() || cliSourceArg;
+if (!sourceArg) {
+  throw new Error("Missing asset source path. Set SABRA_ASSET_PATH or pass a folder path as the first argument.");
+}
+
 const sourceRoot = resolve(sourceArg);
 const storageHost = process.env.BUNNY_STORAGE_HOST?.trim();
 const provider = new BunnyStorageProvider({
@@ -67,6 +71,7 @@ const provider = new BunnyStorageProvider({
 
 const files = (await walk(sourceRoot)).sort();
 if (!files.length) throw new Error(`No supported media files found under ${sourceRoot}`);
+console.log(`Source: ${sourceRoot}`);
 console.log(`Found ${files.length} media file(s). Publishing as CANDIDATE...`);
 
 const assets = [];
