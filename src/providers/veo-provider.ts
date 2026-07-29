@@ -1,3 +1,5 @@
+import type { AssetRecord } from "../assets/registry.js";
+import { selectVeoReferences } from "./veo-reference-selector.js";
 import type { GenerationRequest, GenerationResult, VideoProvider } from "./video-provider.js";
 
 export interface VeoProviderOptions {
@@ -5,6 +7,12 @@ export interface VeoProviderOptions {
   model?: string;
   pollIntervalMs?: number;
   timeoutMs?: number;
+}
+
+export interface VeoPreparedRequest {
+  model: string;
+  body: unknown;
+  selectedReferences: AssetRecord[];
 }
 
 export class VeoVideoProvider implements VideoProvider {
@@ -22,21 +30,40 @@ export class VeoVideoProvider implements VideoProvider {
     this.timeoutMs = options.timeoutMs ?? 15 * 60_000;
   }
 
-  async generate(request: GenerationRequest): Promise<GenerationResult> {
-    // The semantic reference resolver may return more assets than Veo accepts.
-    // Reference-image transport is added separately; never silently discard identity refs here.
-    if (request.referenceAssetIds.length > 0) {
-      throw new Error("Veo reference image transport is not configured yet; refusing identity-unsafe generation");
+  async prepare(request: GenerationRequest): Promise<VeoPreparedRequest> {
+    const selectedReferences = selectVeoReferences(request.referenceAssets ?? []);
+    if (request.referenceAssetIds.length > 0 && selectedReferences.length === 0) {
+      throw new Error("Veo received reference asset IDs without transportable CANON image records");
+    }
+    if (selectedReferences.length > 0 && request.shot.durationSeconds !== 8) {
+      throw new Error("Veo 3.1 reference-image generation requires an 8-second shot");
+    }
+    if (selectedReferences.length > 0 && this.model.includes("fast")) {
+      throw new Error("Veo Fast is not used for CANON reference-image generation");
     }
 
-    const operation = await this.postJson(`/models/${this.model}:predictLongRunning`, {
-      instances: [{ prompt: request.prompt }],
-      parameters: {
-        aspectRatio: "16:9",
-        numberOfVideos: 1,
-        resolution: "720p",
+    const referenceImages = await Promise.all(selectedReferences.map(toVeoReferenceImage));
+    const instance: Record<string, unknown> = { prompt: request.prompt };
+    if (referenceImages.length > 0) instance.referenceImages = referenceImages;
+
+    return {
+      model: this.model,
+      selectedReferences,
+      body: {
+        instances: [instance],
+        parameters: {
+          aspectRatio: "16:9",
+          resolution: "720p",
+          durationSeconds: request.shot.durationSeconds,
+          sampleCount: 1,
+        },
       },
-    });
+    };
+  }
+
+  async generate(request: GenerationRequest): Promise<GenerationResult> {
+    const prepared = await this.prepare(request);
+    const operation = await this.postJson(`/models/${prepared.model}:predictLongRunning`, prepared.body);
 
     if (typeof operation.name !== "string" || !operation.name) throw new Error("Veo did not return an operation name");
     const completed = await this.waitForOperation(operation.name);
@@ -80,6 +107,25 @@ export class VeoVideoProvider implements VideoProvider {
     });
     return parseResponse(response);
   }
+}
+
+async function toVeoReferenceImage(asset: AssetRecord): Promise<unknown> {
+  const response = await fetch(asset.uri);
+  if (!response.ok) throw new Error(`Unable to fetch reference asset ${asset.id}: HTTP ${response.status}`);
+  const mimeType = response.headers.get("content-type")?.split(";")[0] || mimeFromUri(asset.uri);
+  if (!mimeType.startsWith("image/")) throw new Error(`Reference asset ${asset.id} is not an image: ${mimeType}`);
+  const bytes = Buffer.from(await response.arrayBuffer());
+  return {
+    referenceType: "asset",
+    image: { bytesBase64Encoded: bytes.toString("base64"), mimeType },
+  };
+}
+
+function mimeFromUri(uri: string): string {
+  const clean = uri.toLowerCase().split("?")[0];
+  if (clean.endsWith(".jpg") || clean.endsWith(".jpeg")) return "image/jpeg";
+  if (clean.endsWith(".webp")) return "image/webp";
+  return "image/png";
 }
 
 async function parseResponse(response: Response): Promise<any> {
