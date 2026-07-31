@@ -7,6 +7,7 @@
   "scripts": {
     "episode": "node scripts/episode.mjs",
     "episode:approve-story": "node scripts/episode-approve-story.mjs",
+    "episode:prepare-audio": "node scripts/episode-audio-prepare.mjs",
     "episode:status": "node scripts/episode-orchestrator.mjs status",
     "episode:resume": "node scripts/episode-orchestrator.mjs resume",
     "episode:approve-visuals": "node scripts/episode-orchestrator.mjs approve-visuals",
