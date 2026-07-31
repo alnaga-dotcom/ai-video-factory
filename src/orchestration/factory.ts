@@ -97,6 +97,13 @@ async function generateShot(
   correctiveInstruction?: string,
 ): Promise<ProducedShot> {
   const route = routeShot(shot);
+
+  // Pipeline v2: still and motion-still shots are assembled from approved visual
+  // masters by the edit pipeline. They must never consume video-generation credits.
+  if (!route.requiresVideoGeneration || !route.tier) {
+    throw new Error(`Shot ${shot.id} uses ${route.mode}; no video provider should be invoked`);
+  }
+
   const model = selectConfiguredModel(deps.models, route.tier, shot.durationSeconds);
   const provider = deps.providers.get(model.provider);
   if (!provider) throw new Error(`Provider not registered: ${model.provider}`);
@@ -125,6 +132,20 @@ export async function produceShotWithQa(
   deps: FactoryDependencies,
   options: ProductionOptions = {},
 ): Promise<ShotProductionResult> {
+  const route = routeShot(shot);
+
+  // Visual masters for these modes are created/reviewed upstream at Gate 01 and
+  // assembled downstream. Marking them approved here prevents accidental paid generation.
+  if (!route.requiresVideoGeneration) {
+    return {
+      shot: withStatus(shot, "approved"),
+      status: "approved",
+      attempts: [],
+      totalCostCredits: 0,
+      failedCriteria: [],
+    };
+  }
+
   const maxRetries = Math.max(0, options.maxRetries ?? 2);
   const attempts: ShotAttempt[] = [];
   let correctiveInstruction: string | undefined;
