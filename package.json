@@ -7,6 +7,12 @@
   "scripts": {
     "episode": "node scripts/episode.mjs",
     "episode:approve-story": "node scripts/episode-approve-story.mjs",
+    "episode:status": "node scripts/episode-orchestrator.mjs status",
+    "episode:resume": "node scripts/episode-orchestrator.mjs resume",
+    "episode:approve-visuals": "node scripts/episode-orchestrator.mjs approve-visuals",
+    "episode:reject-visuals": "node scripts/episode-orchestrator.mjs reject-visuals",
+    "episode:approve-publish": "node scripts/episode-orchestrator.mjs approve-publish",
+    "episode:reject-publish": "node scripts/episode-orchestrator.mjs reject-publish",
     "typecheck": "tsc --noEmit",
     "build": "tsc -p tsconfig.json",
     "test": "npm run build && node --test test/**/*.test.mjs",
