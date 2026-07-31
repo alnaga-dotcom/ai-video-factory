@@ -1,0 +1,55 @@
+{
+  "version": "1.0",
+  "worldId": "sabra-world",
+  "publishedAt": "2026-07-29T20:49:17.519Z",
+  "assets": [
+    {
+      "id": "sabra-world-logo-v1",
+      "worldId": "sabra-world",
+      "kind": "image",
+      "role": "BRAND_LOGO",
+      "status": "CANDIDATE",
+      "version": "1.0.0",
+      "uri": "https://AIVF.b-cdn.net/worlds/sabra-world/brand/source/a28205085de7-logo.png",
+      "sha256": "a28205085de7e4a1d51095ed6cedec538768ef58ae52afbef46b973d27e2d066",
+      "tags": [
+        "brand",
+        "mastering",
+        "brand_logo"
+      ],
+      "notes": "Approved source supplied for Sabra World mastering; publish as CANDIDATE until mastered intro approval."
+    },
+    {
+      "id": "sabra-world-intro-music-v1",
+      "worldId": "sabra-world",
+      "kind": "audio",
+      "role": "INTRO_MUSIC",
+      "status": "CANDIDATE",
+      "version": "1.0.0",
+      "uri": "https://AIVF.b-cdn.net/worlds/sabra-world/brand/source/d95f9d6eb2ba-intro-music.m4a",
+      "sha256": "d95f9d6eb2bad6927367a256e26945ca8a482ed15069dc7f1cf56851659f2f71",
+      "tags": [
+        "brand",
+        "mastering",
+        "intro_music"
+      ],
+      "notes": "Approved source supplied for Sabra World mastering; publish as CANDIDATE until mastered intro approval."
+    },
+    {
+      "id": "sabra-laugh-v1",
+      "worldId": "sabra-world",
+      "kind": "audio",
+      "role": "CHARACTER_LAUGH",
+      "status": "CANDIDATE",
+      "version": "1.0.0",
+      "uri": "https://AIVF.b-cdn.net/worlds/sabra-world/brand/source/856762239423-sabra-laugh.m4a",
+      "sha256": "8567622394231e7d01b27af8e6f10d24553d5f1703defe7ae0dcfb3ea2d38eae",
+      "tags": [
+        "brand",
+        "mastering",
+        "character_laugh"
+      ],
+      "notes": "Approved source supplied for Sabra World mastering; publish as CANDIDATE until mastered intro approval."
+    }
+  ]
+}

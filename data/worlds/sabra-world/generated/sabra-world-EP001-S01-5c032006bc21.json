@@ -1,0 +1,36 @@
+{
+  "id": "sabra-world-EP001-S01-5c032006bc21",
+  "worldId": "sabra-world",
+  "episodeId": "EP001",
+  "sceneId": "S01",
+  "kind": "video",
+  "status": "CANDIDATE",
+  "version": "1",
+  "uri": "https://AIVF.b-cdn.net/worlds/sabra-world/episodes/EP001/candidates/S01/2026-07-29T23-29-21-311Z-5c032006bc21.mp4",
+  "sha256": "5c032006bc21776856442e8890a9c29588af213c6e3f547f3d41e699b05c7302",
+  "tags": [
+    "episode",
+    "EP001",
+    "S01",
+    "generated",
+    "veo",
+    "candidate"
+  ],
+  "generation": {
+    "provider": "veo",
+    "model": "veo-3.1-generate-preview",
+    "durationSeconds": 8,
+    "generatedAt": "2026-07-29T23:29:21.311Z",
+    "prompt": "Present-day Sabra at her village home. She naturally turns toward camera with a warm confident expression as if beginning a personal story. Intimate medium cinematic coverage; lively but grounded energy; never presenter-like. Cinematic realistic Egyptian visual storytelling, authentic rural environments, natural skin and anatomy, stable hands and clothing, restrained premium camera movement, warm photographic lighting. No text, captions, logos, watermark, fake branding, or generated dialogue. The approved narration will be added in post-production. Maintain Sabra's exact facial identity, apparent age, body proportions, natural Egyptian appearance and established costume from CANON references.",
+    "route": "CANON_REFERENCE_REQUIRED",
+    "referenceAssetIds": [
+      "sabra-sabra-face-closeup-front-master-v1-4547574d",
+      "sabra-sabra-portrait-45l-master-v1-574ac942",
+      "sabra-sabra-fullbody-turnaround-master-v1-26249822",
+      "sabra-sabra-master-reference-sheet-v1-1-1ec20444",
+      "sabra-sabra-costume-details-master-v1-ebfebbab",
+      "sabra-sabra-expressions-reference-v1-a312bae2",
+      "sabra-sabra-scale-proportions-master-v1-0a57cf64"
+    ]
+  }
+}

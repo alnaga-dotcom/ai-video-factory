@@ -1,0 +1,28 @@
+{
+  "id": "sabra-world-EP001-S04-59cc27d67138",
+  "worldId": "sabra-world",
+  "episodeId": "EP001",
+  "sceneId": "S04",
+  "kind": "video",
+  "status": "CANDIDATE",
+  "version": "1",
+  "uri": "https://AIVF.b-cdn.net/worlds/sabra-world/episodes/EP001/candidates/S04/2026-07-29T23-31-04-197Z-59cc27d67138.mp4",
+  "sha256": "59cc27d671381d638e4bc1ff23a48dc6f43d119006c8208cb4205da30f9adce6",
+  "tags": [
+    "episode",
+    "EP001",
+    "S04",
+    "generated",
+    "veo",
+    "candidate"
+  ],
+  "generation": {
+    "provider": "veo",
+    "model": "veo-3.1-generate-preview",
+    "durationSeconds": 8,
+    "generatedAt": "2026-07-29T23:31:04.197Z",
+    "prompt": "Montage of years of Egyptian family life: Nile water, agricultural land, home cooking, children growing, work, celebrations, ordinary hardship, laughter and a warm multigenerational home. Focus on hands, places, food and family moments; natural passage-of-time feeling. Cinematic realistic Egyptian visual storytelling, authentic rural environments, natural skin and anatomy, stable hands and clothing, restrained premium camera movement, warm photographic lighting. No text, captions, logos, watermark, fake branding, or generated dialogue. The approved narration will be added in post-production.",
+    "route": "MIXED",
+    "referenceAssetIds": []
+  }
+}

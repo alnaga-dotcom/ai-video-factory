@@ -1,0 +1,295 @@
+{
+  "version": "1.0.0",
+  "worldId": "sabra-world",
+  "characterId": "sabra",
+  "generatedAt": "2026-07-29T14:21:00.798Z",
+  "sourceManifest": "A:\\ai-video-factory\\data\\worlds\\sabra-world\\sabra-bulk-assets.generated.json",
+  "policy": "A:\\ai-video-factory\\data\\worlds\\sabra-world\\sabra-canon-policy.json",
+  "assets": [
+    {
+      "id": "sabra-logo-a2820508",
+      "worldId": "sabra-world",
+      "kind": "image",
+      "status": "CANDIDATE",
+      "version": "1.0.0",
+      "uri": "https://AIVF.b-cdn.net/worlds/sabra-world/characters/sabra/source/a28205085de7-logo.png",
+      "sha256": "a28205085de7e4a1d51095ed6cedec538768ef58ae52afbef46b973d27e2d066",
+      "characterId": "sabra",
+      "tags": [
+        "source-library",
+        "bulk-import"
+      ],
+      "notes": "Imported from Logo.png. Promote to CANON only after explicit approval. Brand asset; must be migrated out of the character identity namespace.",
+      "role": "BRAND"
+    },
+    {
+      "id": "sabra-refrencessabra-field-fullbody-master-v1-7fb16b7a",
+      "worldId": "sabra-world",
+      "kind": "image",
+      "status": "CANDIDATE",
+      "version": "1.0.0",
+      "uri": "https://AIVF.b-cdn.net/worlds/sabra-world/characters/sabra/source/7fb16b7aaf6a-refrencessabra-field-fullbody-master-v1.png",
+      "sha256": "7fb16b7aaf6ad42caab6d3ade80280bc3dd625183e0d1b09e76becf299c3f62f",
+      "characterId": "sabra",
+      "tags": [
+        "source-library",
+        "bulk-import"
+      ],
+      "notes": "Imported from RefrencesSabra_Field_FullBody_Master_v1.png. Promote to CANON only after explicit approval. Variant requires visual review against the selected field master.",
+      "role": "BODY_IDENTITY"
+    },
+    {
+      "id": "sabra-sabra-costume-details-master-v1-ebfebbab",
+      "worldId": "sabra-world",
+      "kind": "image",
+      "status": "CANON",
+      "version": "1.0.0",
+      "uri": "https://AIVF.b-cdn.net/worlds/sabra-world/characters/sabra/source/ebfebbab8caa-sabra-costume-details-master-v1.png",
+      "sha256": "ebfebbab8caac43a226a01b006adb2880769cf1b7e2bfe6b65d0590ccc3b51d8",
+      "characterId": "sabra",
+      "tags": [
+        "source-library",
+        "bulk-import"
+      ],
+      "notes": "Imported from Sabra_Costume_Details_Master_v1.png. Promote to CANON only after explicit approval.",
+      "role": "COSTUME",
+      "canonTier": "PRIMARY"
+    },
+    {
+      "id": "sabra-sabra-expressions-reference-v1-a312bae2",
+      "worldId": "sabra-world",
+      "kind": "image",
+      "status": "CANON",
+      "version": "1.0.0",
+      "uri": "https://AIVF.b-cdn.net/worlds/sabra-world/characters/sabra/source/a312bae2d051-sabra-expressions-reference-v1.png",
+      "sha256": "a312bae2d051310e4de110e686f3016d3f7ba730d40203e17c5a4141ccd5e2c5",
+      "characterId": "sabra",
+      "tags": [
+        "source-library",
+        "bulk-import"
+      ],
+      "notes": "Imported from Sabra_Expressions_Reference_v1.png. Promote to CANON only after explicit approval.",
+      "role": "EXPRESSION",
+      "canonTier": "SUPPORTING"
+    },
+    {
+      "id": "sabra-sabra-face-closeup-front-master-v1-4547574d",
+      "worldId": "sabra-world",
+      "kind": "image",
+      "status": "CANON",
+      "version": "1.0.0",
+      "uri": "https://AIVF.b-cdn.net/worlds/sabra-world/characters/sabra/source/4547574d82f9-sabra-face-closeup-front-master-v1.png",
+      "sha256": "4547574d82f9558e848fb68e072d6cff96dc0661fdc1e22a4b4773982b4d8d2c",
+      "characterId": "sabra",
+      "tags": [
+        "source-library",
+        "bulk-import"
+      ],
+      "notes": "Imported from Sabra_Face_Closeup_Front_Master_v1.png. Promote to CANON only after explicit approval.",
+      "role": "FACE_IDENTITY",
+      "canonTier": "PRIMARY"
+    },
+    {
+      "id": "sabra-sabra-field-fullbody-master-v1-64bc9a78",
+      "worldId": "sabra-world",
+      "kind": "image",
+      "status": "CANON",
+      "version": "1.0.0",
+      "uri": "https://AIVF.b-cdn.net/worlds/sabra-world/characters/sabra/source/64bc9a78d795-sabra-field-fullbody-master-v1.png",
+      "sha256": "64bc9a78d7952eb2bafa9eccdd8578319a09ad07438bf597d19825f3106d7481",
+      "characterId": "sabra",
+      "tags": [
+        "source-library",
+        "bulk-import"
+      ],
+      "notes": "Imported from Sabra_Field_FullBody_Master_v1.png. Promote to CANON only after explicit approval.",
+      "role": "BODY_IDENTITY",
+      "canonTier": "SUPPORTING"
+    },
+    {
+      "id": "sabra-sabra-fullbody-turnaround-master-v1-26249822",
+      "worldId": "sabra-world",
+      "kind": "image",
+      "status": "CANON",
+      "version": "1.0.0",
+      "uri": "https://AIVF.b-cdn.net/worlds/sabra-world/characters/sabra/source/26249822c05e-sabra-fullbody-turnaround-master-v1.png",
+      "sha256": "26249822c05ecfe30a24a0852862d2551c806e5f146e772f1cc1b48f17a67fda",
+      "characterId": "sabra",
+      "tags": [
+        "source-library",
+        "bulk-import"
+      ],
+      "notes": "Imported from Sabra_FullBody_Turnaround_Master_v1.png. Promote to CANON only after explicit approval.",
+      "role": "BODY_IDENTITY",
+      "canonTier": "PRIMARY"
+    },
+    {
+      "id": "sabra-sabra-hands-nails-master-reference-v1-2-c84815c4",
+      "worldId": "sabra-world",
+      "kind": "image",
+      "status": "CANDIDATE",
+      "version": "1.0.0",
+      "uri": "https://AIVF.b-cdn.net/worlds/sabra-world/characters/sabra/source/c84815c49131-sabra-hands-nails-master-reference-v1-2.png",
+      "sha256": "c84815c4913162d8d1da03779883e7664a41af5c98bb90594ace2eca902b0a07",
+      "characterId": "sabra",
+      "tags": [
+        "source-library",
+        "bulk-import"
+      ],
+      "notes": "Imported from Sabra_Hands_Nails_Master_Reference_v1 (2).png. Promote to CANON only after explicit approval. Variant requires visual review against the selected hands master.",
+      "role": "DETAIL"
+    },
+    {
+      "id": "sabra-sabra-hands-nails-master-reference-v1-9217b977",
+      "worldId": "sabra-world",
+      "kind": "image",
+      "status": "CANON",
+      "version": "1.0.0",
+      "uri": "https://AIVF.b-cdn.net/worlds/sabra-world/characters/sabra/source/9217b9773f67-sabra-hands-nails-master-reference-v1.png",
+      "sha256": "9217b9773f67e0a819d68c41408b7f7286b3fddda4b2b3fd9e1895c2a9841ed9",
+      "characterId": "sabra",
+      "tags": [
+        "source-library",
+        "bulk-import"
+      ],
+      "notes": "Imported from Sabra_Hands_Nails_Master_Reference_v1.png. Promote to CANON only after explicit approval.",
+      "role": "DETAIL",
+      "canonTier": "SUPPORTING"
+    },
+    {
+      "id": "sabra-sabra-master-reference-sheet-v1-1-1ec20444",
+      "worldId": "sabra-world",
+      "kind": "image",
+      "status": "CANON",
+      "version": "1.0.0",
+      "uri": "https://AIVF.b-cdn.net/worlds/sabra-world/characters/sabra/source/1ec204443657-sabra-master-reference-sheet-v1-1.png",
+      "sha256": "1ec204443657d726aa5c687515da6c2ac5ba7c238222b2d6f1195073238d9091",
+      "characterId": "sabra",
+      "tags": [
+        "source-library",
+        "bulk-import"
+      ],
+      "notes": "Imported from Sabra_Master_Reference_Sheet_v1.1.png. Promote to CANON only after explicit approval.",
+      "role": "BODY_IDENTITY",
+      "canonTier": "PRIMARY"
+    },
+    {
+      "id": "sabra-sabra-master-reference-sheet-v1-1ec20444",
+      "worldId": "sabra-world",
+      "kind": "image",
+      "status": "RETIRED",
+      "version": "1.0.0",
+      "uri": "https://AIVF.b-cdn.net/worlds/sabra-world/characters/sabra/source/1ec204443657-sabra-master-reference-sheet-v1.png",
+      "sha256": "1ec204443657d726aa5c687515da6c2ac5ba7c238222b2d6f1195073238d9091",
+      "characterId": "sabra",
+      "tags": [
+        "source-library",
+        "bulk-import"
+      ],
+      "notes": "Imported from Sabra_Master_Reference_Sheet_v1.png. Promote to CANON only after explicit approval. Binary duplicate of v1.1; retained in storage but excluded logically.",
+      "role": "BODY_IDENTITY"
+    },
+    {
+      "id": "sabra-sabra-natural-poses-reference-v1-31a1ff5a",
+      "worldId": "sabra-world",
+      "kind": "image",
+      "status": "CANON",
+      "version": "1.0.0",
+      "uri": "https://AIVF.b-cdn.net/worlds/sabra-world/characters/sabra/source/31a1ff5ae103-sabra-natural-poses-reference-v1.png",
+      "sha256": "31a1ff5ae1031142b0564492f0d2b78003e584194509c1f2270078d562b82d40",
+      "characterId": "sabra",
+      "tags": [
+        "source-library",
+        "bulk-import"
+      ],
+      "notes": "Imported from Sabra_Natural_Poses_Reference_v1.png. Promote to CANON only after explicit approval.",
+      "role": "POSE",
+      "canonTier": "SUPPORTING"
+    },
+    {
+      "id": "sabra-sabra-outdoor-kitchen-action-reference-v1-16d80cb4",
+      "worldId": "sabra-world",
+      "kind": "image",
+      "status": "CANON",
+      "version": "1.0.0",
+      "uri": "https://AIVF.b-cdn.net/worlds/sabra-world/characters/sabra/source/16d80cb4e1a7-sabra-outdoor-kitchen-action-reference-v1.png",
+      "sha256": "16d80cb4e1a7bb04cbbfb881f813187f02d89b723add66fd5a78ab7238a5db15",
+      "characterId": "sabra",
+      "tags": [
+        "source-library",
+        "bulk-import"
+      ],
+      "notes": "Imported from Sabra_Outdoor_Kitchen_Action_Reference_v1.png. Promote to CANON only after explicit approval.",
+      "role": "ACTION",
+      "canonTier": "SUPPORTING"
+    },
+    {
+      "id": "sabra-sabra-portrait-45l-master-v1-574ac942",
+      "worldId": "sabra-world",
+      "kind": "image",
+      "status": "CANON",
+      "version": "1.0.0",
+      "uri": "https://AIVF.b-cdn.net/worlds/sabra-world/characters/sabra/source/574ac9424b66-sabra-portrait-45l-master-v1.png",
+      "sha256": "574ac9424b66d9aac017e43fd94255a742fa1d5084bb2560bd9b11f120583f5f",
+      "characterId": "sabra",
+      "tags": [
+        "source-library",
+        "bulk-import"
+      ],
+      "notes": "Imported from Sabra_Portrait_45L_Master_v1.png. Promote to CANON only after explicit approval.",
+      "role": "FACE_IDENTITY",
+      "canonTier": "PRIMARY"
+    },
+    {
+      "id": "sabra-sabra-portrait-45r-master-v1-2be3d78b",
+      "worldId": "sabra-world",
+      "kind": "image",
+      "status": "CANON",
+      "version": "1.0.0",
+      "uri": "https://AIVF.b-cdn.net/worlds/sabra-world/characters/sabra/source/2be3d78bfc25-sabra-portrait-45r-master-v1.png",
+      "sha256": "2be3d78bfc25a72dba804914fc44804a37b3b57fbb4c2264e2ac36dc23eacfa0",
+      "characterId": "sabra",
+      "tags": [
+        "source-library",
+        "bulk-import"
+      ],
+      "notes": "Imported from Sabra_Portrait_45R_Master_v1.png. Promote to CANON only after explicit approval.",
+      "role": "FACE_IDENTITY",
+      "canonTier": "PRIMARY"
+    },
+    {
+      "id": "sabra-sabra-portrait-front-master-v1-ae2bcc42",
+      "worldId": "sabra-world",
+      "kind": "image",
+      "status": "CANON",
+      "version": "1.0.0",
+      "uri": "https://AIVF.b-cdn.net/worlds/sabra-world/characters/sabra/source/ae2bcc42284b-sabra-portrait-front-master-v1.png",
+      "sha256": "ae2bcc42284bc2760474be8dd956567be3584273cd12376b75c5a5748f2f3768",
+      "characterId": "sabra",
+      "tags": [
+        "source-library",
+        "bulk-import"
+      ],
+      "notes": "Imported from Sabra_Portrait_Front_Master_v1.png. Promote to CANON only after explicit approval.",
+      "role": "FACE_IDENTITY",
+      "canonTier": "PRIMARY"
+    },
+    {
+      "id": "sabra-sabra-scale-proportions-master-v1-0a57cf64",
+      "worldId": "sabra-world",
+      "kind": "image",
+      "status": "CANON",
+      "version": "1.0.0",
+      "uri": "https://AIVF.b-cdn.net/worlds/sabra-world/characters/sabra/source/0a57cf64f57e-sabra-scale-proportions-master-v1.png",
+      "sha256": "0a57cf64f57eeeec13c1d83a294a0b7cb3435528e2fe7402d0ce36fd28e1e50e",
+      "characterId": "sabra",
+      "tags": [
+        "source-library",
+        "bulk-import"
+      ],
+      "notes": "Imported from Sabra_Scale_Proportions_Master_v1.png. Promote to CANON only after explicit approval.",
+      "role": "PROPORTIONS",
+      "canonTier": "PRIMARY"
+    }
+  ]
+}

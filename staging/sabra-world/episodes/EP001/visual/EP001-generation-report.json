@@ -1,0 +1,43 @@
+{
+  "episode": "EP001",
+  "generatedAt": "2026-07-29T23:33:01.426Z",
+  "concurrency": 2,
+  "results": [
+    {
+      "sceneId": "S01",
+      "status": "PASS",
+      "uri": "https://AIVF.b-cdn.net/worlds/sabra-world/episodes/EP001/candidates/S01/2026-07-29T23-29-21-311Z-5c032006bc21.mp4",
+      "recordPath": "data/worlds/sabra-world/generated/sabra-world-EP001-S01-5c032006bc21.json"
+    },
+    {
+      "sceneId": "S02",
+      "status": "PASS",
+      "uri": "https://AIVF.b-cdn.net/worlds/sabra-world/episodes/EP001/candidates/S02/2026-07-29T23-29-42-620Z-6d287a8dfaf0.mp4",
+      "recordPath": "data/worlds/sabra-world/generated/sabra-world-EP001-S02-6d287a8dfaf0.json"
+    },
+    {
+      "sceneId": "S03",
+      "status": "PASS",
+      "uri": "https://AIVF.b-cdn.net/worlds/sabra-world/episodes/EP001/candidates/S03/2026-07-29T23-30-43-351Z-a5a288508f2c.mp4",
+      "recordPath": "data/worlds/sabra-world/generated/sabra-world-EP001-S03-a5a288508f2c.json"
+    },
+    {
+      "sceneId": "S04",
+      "status": "PASS",
+      "uri": "https://AIVF.b-cdn.net/worlds/sabra-world/episodes/EP001/candidates/S04/2026-07-29T23-31-04-197Z-59cc27d67138.mp4",
+      "recordPath": "data/worlds/sabra-world/generated/sabra-world-EP001-S04-59cc27d67138.json"
+    },
+    {
+      "sceneId": "S05",
+      "status": "PASS",
+      "uri": "https://AIVF.b-cdn.net/worlds/sabra-world/episodes/EP001/candidates/S05/2026-07-29T23-32-06-235Z-22b002fcfbea.mp4",
+      "recordPath": "data/worlds/sabra-world/generated/sabra-world-EP001-S05-22b002fcfbea.json"
+    },
+    {
+      "sceneId": "S06",
+      "status": "PASS",
+      "uri": "https://AIVF.b-cdn.net/worlds/sabra-world/episodes/EP001/candidates/S06/2026-07-29T23-32-58-008Z-97f8760cf06f.mp4",
+      "recordPath": "data/worlds/sabra-world/generated/sabra-world-EP001-S06-97f8760cf06f.json"
+    }
+  ]
+}
