@@ -1,0 +1,66 @@
+{
+  "id": "CH001",
+  "name": "Omar",
+  "version": "1.0",
+  "type": "on_screen",
+  "role": "main_male_lead",
+
+  "basic": {
+    "age": 28,
+    "gender": "male",
+    "nationality": "Egyptian",
+    "height_cm": 178,
+    "weight_kg": 76
+  },
+
+  "appearance": {
+    "skin_tone": "light olive Mediterranean",
+    "build": "athletic, naturally fit",
+    "face_shape": "oval with defined jawline",
+    "eyes": "dark brown",
+    "eyebrows": "thick and well-groomed",
+    "hair": "short black textured modern cut",
+    "facial_hair": "short neatly trimmed beard, 1-3 mm",
+    "nose": "straight, medium size",
+    "smile": "natural and warm"
+  },
+
+  "personality": [
+    "honest",
+    "calm",
+    "intelligent",
+    "respectful",
+    "emotionally mature",
+    "helpful",
+    "curious",
+    "romantic",
+    "patient",
+    "optimistic"
+  ],
+
+  "weaknesses": [
+    "overthinks",
+    "trusts people too easily",
+    "sometimes avoids confrontation"
+  ],
+
+  "speaking_style": {
+    "language": "Egyptian Arabic",
+    "pace": "medium",
+    "tone": "warm, confident and respectful",
+    "style": "natural everyday Egyptian speech"
+  },
+
+  "relationships": {
+    "Nour": "girlfriend",
+    "Karim": "best friend"
+  },
+
+  "identity_rules": {
+    "face_consistency": "strict",
+    "hair_consistency": "strict",
+    "facial_hair_consistency": "strict",
+    "body_consistency": "strict",
+    "outfit_can_change": true
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "character_id": "CH001",
+  "version": "1.0",
+  "language": "Arabic",
+  "dialect": "Modern Egyptian Arabic",
+  "gender": "male",
+  "apparent_age": "late twenties",
+  "tone": "warm, confident, calm",
+  "pitch": "medium",
+  "pace": "medium",
+  "energy": "moderate",
+  "delivery": "natural and conversational",
+  "emotional_style": "expressive but controlled",
+  "voice_provider": "gemini",
+  "voice_id": "gemini:Charon",
+  "reference_audio": null
+}

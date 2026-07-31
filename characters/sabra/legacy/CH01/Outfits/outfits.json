@@ -1,0 +1,49 @@
+{
+  "character_id": "CH001",
+  "version": "1.0",
+  "default_outfit": "OUT001",
+
+  "outfits": [
+    {
+      "id": "OUT001",
+      "name": "Casual Default",
+      "items": [
+        "white crew-neck T-shirt",
+        "blue jeans",
+        "white sneakers",
+        "black smartwatch"
+      ]
+    },
+    {
+      "id": "OUT002",
+      "name": "Smart Casual",
+      "items": [
+        "light blue shirt",
+        "dark jeans",
+        "brown leather shoes",
+        "silver wristwatch"
+      ]
+    },
+    {
+      "id": "OUT003",
+      "name": "Business",
+      "items": ["navy suit", "white shirt", "dark tie", "black leather shoes"]
+    },
+    {
+      "id": "OUT004",
+      "name": "Home",
+      "items": ["black T-shirt", "grey sweatpants", "slippers"]
+    },
+    {
+      "id": "OUT005",
+      "name": "Winter",
+      "items": ["dark jacket", "beige sweater", "blue jeans", "brown boots"]
+    }
+  ],
+
+  "rules": {
+    "preserve_character_identity": true,
+    "outfit_must_match_scene_context": true,
+    "avoid_random_accessories": true
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "character_id": "CH001",
+  "version": "1.0",
+  "identity_lock": true,
+  "sex": "male",
+  "age": 28,
+  "ethnicity": "Egyptian",
+  "height_cm": 178,
+  "body": "naturally athletic",
+  "skin": "light olive Mediterranean",
+  "face": "oval with defined jawline",
+  "eyes": {
+    "color": "dark brown",
+    "character": "expressive and warm"
+  },
+  "hair": {
+    "color": "black",
+    "length": "short",
+    "style": "modern textured cut"
+  },
+  "facial_hair": "short neatly trimmed beard, 1-3 mm",
+  "eyebrows": "thick and well-groomed",
+  "nose": "straight, medium size",
+  "visual_signature": [
+    "short black textured hair",
+    "dark brown expressive eyes",
+    "defined jawline",
+    "short trimmed beard",
+    "light olive complexion",
+    "athletic silhouette"
+  ],
+  "immutable": [
+    "facial identity",
+    "facial proportions",
+    "skin tone",
+    "eye color",
+    "hair color",
+    "baseline hairstyle",
+    "beard style",
+    "height",
+    "body proportions"
+  ]
+}

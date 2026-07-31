@@ -1,0 +1,63 @@
+{
+  "character_id": "CH001",
+  "version": "1.0",
+
+  "emotions": [
+    {
+      "id": "EMO001",
+      "name": "Happy",
+      "expression": "warm natural smile, relaxed eyes, slightly raised cheeks"
+    },
+    {
+      "id": "EMO002",
+      "name": "Sad",
+      "expression": "subtle sadness, lowered gaze, slightly tense lips"
+    },
+    {
+      "id": "EMO003",
+      "name": "Angry",
+      "expression": "controlled anger, tense jaw, focused eyes, slightly lowered eyebrows"
+    },
+    {
+      "id": "EMO004",
+      "name": "Disappointed",
+      "expression": "quiet disappointment, restrained expression, lowered eyes"
+    },
+    {
+      "id": "EMO005",
+      "name": "Surprised",
+      "expression": "widened eyes, slightly raised eyebrows, natural partially open mouth"
+    },
+    {
+      "id": "EMO006",
+      "name": "Afraid",
+      "expression": "alert eyes, facial tension, restrained believable fear"
+    },
+    {
+      "id": "EMO007",
+      "name": "Grateful",
+      "expression": "gentle smile, warm eyes, sincere appreciative expression"
+    },
+    {
+      "id": "EMO008",
+      "name": "Proud",
+      "expression": "subtle confident smile, upright posture, calm self-assured gaze"
+    },
+    {
+      "id": "EMO009",
+      "name": "Embarrassed",
+      "expression": "shy restrained smile, brief lowered gaze, mild facial tension"
+    },
+    {
+      "id": "EMO010",
+      "name": "Hopeful",
+      "expression": "soft optimistic smile, bright attentive eyes, calm expression"
+    }
+  ],
+
+  "rules": {
+    "preserve_character_identity": true,
+    "natural_expression_only": true,
+    "avoid_exaggerated_cartoon_expression": true
+  }
+}

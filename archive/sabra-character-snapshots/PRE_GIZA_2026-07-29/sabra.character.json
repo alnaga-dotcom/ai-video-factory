@@ -1,0 +1,208 @@
+﻿{
+  "schema_version": "1.0",
+  "character_id": "SABRA",
+  "character_version": "1.0",
+  "status": "visual_identity_locked",
+
+  "identity": {
+    "name_en": "Sabra",
+    "name_ar": "صابرة",
+    "gender": "female",
+    "nationality": "Egyptian",
+    "region": "Upper Egypt",
+    "cultural_identity": "Sa'idi Egyptian",
+    "role": "central character and host of Sabra World",
+    "family_role": "mother and grandmother"
+  },
+
+  "age": {
+    "exact_age": null,
+    "life_stage": "young grandmother",
+    "rule": "She married and became a mother young and is now a grandmother, but must never appear elderly."
+  },
+
+  "physical_identity": {
+    "height_cm": 153,
+    "build": "full, healthy, strong working-woman build",
+    "silhouette": "soft, feminine, grounded and naturally full",
+    "posture": "confident and comfortable",
+
+    "face": {
+      "shape": "soft rounded face",
+      "bone_structure": "soft with no prominent facial bones",
+      "appearance": "natural Egyptian beauty",
+      "expression_baseline": "warm confidence with quiet authority",
+      "smile": "warm and recognizable",
+      "laugh": "open, joyful and emotionally contagious"
+    },
+
+    "eyes": {
+      "size": "wide",
+      "character": "attractive, expressive and warm",
+      "kohl": "elegant traditional black kohl without exaggeration",
+      "signature_feature": true
+    },
+
+    "skin": {
+      "tone": "warm Egyptian wheat olive-brown",
+      "texture": "natural realistic mature skin"
+    },
+
+    "hands": {
+      "importance": "high",
+      "appearance": "clean, healthy and feminine",
+      "nails": "short, natural, clean and carefully maintained"
+    }
+  },
+
+  "signature_features": {
+    "saidi_earrings": {
+      "required": true,
+      "material": "gold",
+      "importance": "signature"
+    },
+
+    "gold_jewelry": {
+      "amount": "restrained",
+      "style": "simple traditional gold"
+    },
+
+    "headscarf": {
+      "required": true,
+      "variation_allowed": true,
+      "style": "traditional practical Upper Egyptian-inspired wrap"
+    }
+  },
+
+  "wardrobe": {
+    "principle": "different looks, same Sabra",
+    "primary_garment": "traditional galabeya",
+
+    "contexts": [
+      "field_and_farm_work",
+      "home_daily_wear",
+      "outdoor_kitchen",
+      "family_gathering",
+      "special_occasion",
+      "travel_and_outing"
+    ],
+
+    "palette": [
+      "black",
+      "olive_green",
+      "burgundy",
+      "indigo_navy",
+      "earth_brown",
+      "terracotta",
+      "warm_beige",
+      "mustard",
+      "deep_teal"
+    ]
+  },
+
+  "personality": {
+    "core_traits": [
+      "warm",
+      "strong",
+      "authoritative",
+      "kind",
+      "family-centered",
+      "hardworking",
+      "practical",
+      "wise",
+      "humorous",
+      "confident",
+      "hospitable"
+    ],
+
+    "humor": "natural and spontaneous, never forced",
+    "family_presence": "affectionate grandmother with natural family authority",
+    "emotional_signature": "a genuine joyful laugh that lifts the people around her"
+  },
+
+  "lifestyle": {
+    "home_setting": "house near the Nile surrounded by green agricultural land",
+
+    "agriculture": {
+      "owns_or_manages_land": true,
+      "daily_connection": true,
+      "produce": "Much of the household vegetables and fruit comes fresh from her land."
+    },
+
+    "animals": {
+      "small_chicken_farm": true,
+      "buffalo_count": 2,
+      "cow_count": 1,
+      "sheep_count": 5,
+      "goat_count": 2
+    },
+
+    "food_supply_principle": "The household relies heavily on its land and animals and purchases relatively little food from outside."
+  },
+
+  "behavior": {
+    "camera_presence": "natural rather than television-presenter-like",
+    "gesture_style": "expressive, practical and natural",
+    "family_interaction": "warm, playful, affectionate and respected",
+    "rule": "Sabra appears to be living her real life while the camera happens to be present."
+  },
+
+  "voice": {
+    "status": "pending_voice_identity_build",
+    "language": "Arabic",
+    "dialect": "Egyptian Sa'idi / Upper Egyptian",
+    "voiceprint": null
+  },
+
+  "visual_constraints": {
+    "must_preserve": [
+      "facial identity",
+      "soft rounded facial structure",
+      "wide expressive eyes",
+      "elegant kohl",
+      "warm wheat olive-brown skin",
+      "full healthy body proportions",
+      "traditional headscarf identity",
+      "signature Sa'idi earrings",
+      "restrained gold jewelry",
+      "clean short natural nails"
+    ],
+
+    "must_avoid": [
+      "prominent facial bones",
+      "thin body",
+      "elderly appearance",
+      "excessive makeup",
+      "heavy glamour styling",
+      "long artificial nails",
+      "excessive jewelry",
+      "generic television chef appearance",
+      "fashion-model proportions",
+      "plastic skin",
+      "theatrical cultural stereotypes"
+    ]
+  },
+
+  "reference_library": {
+    "root": "A:/Sabra World/01_Characters/Sabra/Refrences/",
+    "master_reference": "Sabra_Master_Reference_Sheet_v1.png",
+    "portrait_front": "Sabra_Portrait_Front_Master_v1.png",
+    "portrait_45_right": "Sabra_Portrait_45R_Master_v1.png",
+    "portrait_45_left": "Sabra_Portrait_45L_Master_v1.png",
+    "face_closeup": "Sabra_Face_Closeup_Front_Master_v1.png",
+    "fullbody_turnaround": "Sabra_FullBody_Turnaround_Master_v1.png",
+    "natural_poses": "Sabra_Natural_Poses_Reference_v1.png",
+    "expressions": "Sabra_Expressions_Reference_v1.png",
+    "hands_nails": "Sabra_Hands_Nails_Master_Reference_v1.png",
+    "scale_proportions": "Sabra_Scale_Proportions_Master_v1.png",
+    "field_reference": "Sabra_Field_FullBody_Master_v1.png",
+    "outdoor_kitchen_reference": "Sabra_Outdoor_Kitchen_Action_Reference_v1.png"
+  },
+
+  "production": {
+    "visual_reference_status": "complete",
+    "character_definition_status": "complete",
+    "voice_status": "pending",
+    "video_validation_status": "pending"
+  }
+}

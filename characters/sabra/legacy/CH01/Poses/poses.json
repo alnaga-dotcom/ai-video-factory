@@ -1,0 +1,52 @@
+{
+  "character_id": "CH001",
+  "version": "1.0",
+  "poses": [
+    {
+      "id": "POSE001",
+      "name": "Standing Neutral",
+      "description": "relaxed upright posture, arms naturally at sides"
+    },
+    {
+      "id": "POSE002",
+      "name": "Standing Confident",
+      "description": "upright posture, shoulders relaxed, confident natural stance"
+    },
+    {
+      "id": "POSE003",
+      "name": "Sitting Casual",
+      "description": "comfortable seated posture, relaxed shoulders and natural hand placement"
+    },
+    {
+      "id": "POSE004",
+      "name": "Walking",
+      "description": "natural walking stride with realistic arm movement"
+    },
+    {
+      "id": "POSE005",
+      "name": "Conversation",
+      "description": "engaged posture facing another person with subtle natural hand gestures"
+    },
+    {
+      "id": "POSE006",
+      "name": "Thinking",
+      "description": "quiet reflective posture with attentive gaze"
+    },
+    {
+      "id": "POSE007",
+      "name": "Using Phone",
+      "description": "natural posture holding and looking at a smartphone"
+    },
+    {
+      "id": "POSE008",
+      "name": "Working",
+      "description": "focused seated posture suitable for desk or laptop work"
+    }
+  ],
+  "rules": {
+    "natural_anatomy": true,
+    "natural_hand_positions": true,
+    "preserve_body_proportions": true,
+    "avoid_exaggerated_poses": true
+  }
+}
