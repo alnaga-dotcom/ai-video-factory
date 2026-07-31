@@ -1,0 +1,25 @@
+﻿{
+    "assetId":  "sabra-world-EP001-S01-dialogue-v001",
+    "branch":  "sabra-world",
+    "productionId":  "EP001",
+    "sceneId":  "S01",
+    "characterId":  "sabra",
+    "assetType":  "work",
+    "status":  "approved",
+    "file":  {
+                 "path":  "A:\\Media Factory\\Sabra World\\episodes\\EP001\\work\\generation\\capcut\\approved\\EP001-S01-sabra-dialogue-front-v001.mp4",
+                 "format":  "mp4",
+                 "bytes":  0,
+                 "sha256":  null
+             },
+    "generation":  {
+                       "engine":  "CapCut",
+                       "mode":  "AI Dialogue Scene",
+                       "fps":  30,
+                       "resolution":  "1920x1080",
+                       "cost":  37,
+                       "costUnit":  "credits",
+                       "portrait":  "front-0"
+                   },
+    "createdAt":  "2026-07-30T14:08:58.0935058Z"
+}
