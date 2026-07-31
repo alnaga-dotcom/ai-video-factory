@@ -1,0 +1,36 @@
+{
+  "id": "sabra-world-EP001-S06-97f8760cf06f",
+  "worldId": "sabra-world",
+  "episodeId": "EP001",
+  "sceneId": "S06",
+  "kind": "video",
+  "status": "CANDIDATE",
+  "version": "1",
+  "uri": "https://AIVF.b-cdn.net/worlds/sabra-world/episodes/EP001/candidates/S06/2026-07-29T23-32-58-008Z-97f8760cf06f.mp4",
+  "sha256": "97f8760cf06f21e6abbf2b85175df090739b772ca8e53c4305cce8e6c7a82b21",
+  "tags": [
+    "episode",
+    "EP001",
+    "S06",
+    "generated",
+    "veo",
+    "candidate"
+  ],
+  "generation": {
+    "provider": "veo",
+    "model": "veo-3.1-generate-preview",
+    "durationSeconds": 8,
+    "generatedAt": "2026-07-29T23:32:58.008Z",
+    "prompt": "Present-day Sabra closes directly to camera with a warm playful expression suggesting the story is only beginning. End with a clean composed visual beat and negative space suitable for deterministic Sabra World branding in post-production. Cinematic realistic Egyptian visual storytelling, authentic rural environments, natural skin and anatomy, stable hands and clothing, restrained premium camera movement, warm photographic lighting. No text, captions, logos, watermark, fake branding, or generated dialogue. The approved narration will be added in post-production. Maintain Sabra's exact facial identity, apparent age, body proportions, natural Egyptian appearance and established costume from CANON references.",
+    "route": "CANON_REFERENCE_REQUIRED",
+    "referenceAssetIds": [
+      "sabra-sabra-face-closeup-front-master-v1-4547574d",
+      "sabra-sabra-portrait-45l-master-v1-574ac942",
+      "sabra-sabra-fullbody-turnaround-master-v1-26249822",
+      "sabra-sabra-master-reference-sheet-v1-1-1ec20444",
+      "sabra-sabra-costume-details-master-v1-ebfebbab",
+      "sabra-sabra-expressions-reference-v1-a312bae2",
+      "sabra-sabra-scale-proportions-master-v1-0a57cf64"
+    ]
+  }
+}

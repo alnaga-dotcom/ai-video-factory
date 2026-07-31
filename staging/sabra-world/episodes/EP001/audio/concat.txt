@@ -1,8 +1,0 @@
-file 'A:\ai-video-factory\staging\sabra-world\episodes\EP001\audio\01-introduction.wav'
-file 'A:\ai-video-factory\staging\sabra-world\episodes\EP001\audio\02-origin.wav'
-file 'A:\ai-video-factory\staging\sabra-world\episodes\EP001\audio\03-marriage.wav'
-file 'A:\ai-video-factory\staging\sabra-world\episodes\EP001\audio\04-life.wav'
-file 'A:\ai-video-factory\staging\sabra-world\episodes\EP001\audio\05-years.wav'
-file 'A:\ai-video-factory\staging\sabra-world\episodes\EP001\audio\06-promise.wav'
-file 'A:\ai-video-factory\staging\sabra-world\episodes\EP001\audio\07-slogan.wav'
-file 'A:\ai-video-factory\staging\sabra-world\episodes\EP001\audio\08-next.wav'

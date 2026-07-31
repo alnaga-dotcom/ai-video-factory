@@ -1,0 +1,40 @@
+{
+  "id": "sabra-sabra-pilot-01-shot-1-5d57435a092f",
+  "worldId": "sabra-world",
+  "characterId": "sabra",
+  "kind": "video",
+  "status": "APPROVED",
+  "version": "1",
+  "uri": "https://AIVF.b-cdn.net/worlds/sabra-world/characters/sabra/generated/sabra-pilot-01/shot-1/2026-07-29T18-02-37-848Z-5d57435a092f.mp4",
+  "sha256": "5d57435a092f8987828a2929894ba2c36a358d86d82eedadb48c289734a8f5a0",
+  "tags": [
+    "generated",
+    "veo",
+    "pilot",
+    "sabra-pilot-01",
+    "shot-1",
+    "first-success"
+  ],
+  "notes": "First successful Sabra Veo 3.1 generation; preserved from the original temporary Gemini file URL without regeneration. Human review approved this output as the Sabra production baseline.",
+  "generation": {
+    "provider": "veo",
+    "model": "veo-3.1-generate-preview",
+    "durationSeconds": 8,
+    "preservedAt": "2026-07-29T18:02:37.848Z",
+    "sceneId": "sabra-pilot-01",
+    "shotId": "shot-1"
+  },
+  "approval": {
+    "approvedAt": "2026-07-29T18:06:23.038Z",
+    "decision": "human-approved",
+    "criteria": [
+      "identity",
+      "body-proportions",
+      "costume",
+      "motion",
+      "realism",
+      "environment",
+      "camera"
+    ]
+  }
+}

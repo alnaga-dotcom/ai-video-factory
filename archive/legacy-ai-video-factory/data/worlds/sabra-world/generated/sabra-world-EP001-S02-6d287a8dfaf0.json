@@ -1,0 +1,28 @@
+{
+  "id": "sabra-world-EP001-S02-6d287a8dfaf0",
+  "worldId": "sabra-world",
+  "episodeId": "EP001",
+  "sceneId": "S02",
+  "kind": "video",
+  "status": "CANDIDATE",
+  "version": "1",
+  "uri": "https://AIVF.b-cdn.net/worlds/sabra-world/episodes/EP001/candidates/S02/2026-07-29T23-29-42-620Z-6d287a8dfaf0.mp4",
+  "sha256": "6d287a8dfaf04269985cbd62537e24084186816fecbffa8758be5161c39b97de",
+  "tags": [
+    "episode",
+    "EP001",
+    "S02",
+    "generated",
+    "veo",
+    "candidate"
+  ],
+  "generation": {
+    "provider": "veo",
+    "model": "veo-3.1-generate-preview",
+    "durationSeconds": 8,
+    "generatedAt": "2026-07-29T23:29:42.620Z",
+    "prompt": "Evocative Upper Egypt memory montage: Nile sunrise, fertile fields, palms, village lanes, modest family-home details, childhood atmosphere and community warmth. No identifiable featured protagonist; this is memory imagery and environmental storytelling. Cinematic realistic Egyptian visual storytelling, authentic rural environments, natural skin and anatomy, stable hands and clothing, restrained premium camera movement, warm photographic lighting. No text, captions, logos, watermark, fake branding, or generated dialogue. The approved narration will be added in post-production.",
+    "route": "VISUAL_FREEDOM",
+    "referenceAssetIds": []
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "sabra-world-intro-v1-master-173ab16eaac2",
+  "worldId": "sabra-world",
+  "kind": "video",
+  "role": "INTRO_MASTER",
+  "status": "CANON",
+  "version": "1.0.0",
+  "uri": "https://AIVF.b-cdn.net/worlds/sabra-world/brand/intro/masters/173ab16eaac2-sabra-world-intro-v1.mp4",
+  "sha256": "173ab16eaac2be7a4efecee918fefbd1a70d7dd4ecfba43ca6226f8f2ca18c19",
+  "durationSeconds": 8,
+  "sourceVideo": "https://AIVF.b-cdn.net/worlds/sabra-world/brand/intro/candidates/2026-07-29T20-12-34-428Z-3467cf9c759d.mp4",
+  "mastering": {
+    "logo": "logo.png",
+    "music": "intro-music.m4a",
+    "laugh": "sabra-laugh.m4a"
+  },
+  "approvedByPolicy": "standing-green-card",
+  "generatedAt": "2026-07-29T20:56:43.188Z"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "sabra-world-intro-v1-3467cf9c759d",
+  "worldId": "sabra-world",
+  "kind": "video",
+  "status": "CANDIDATE",
+  "version": "1",
+  "uri": "https://AIVF.b-cdn.net/worlds/sabra-world/brand/intro/candidates/2026-07-29T20-12-34-428Z-3467cf9c759d.mp4",
+  "sha256": "3467cf9c759dce54d4e45a4b89e48e85afc6eb506782e6d1b720d548870636f1",
+  "tags": [
+    "brand",
+    "intro",
+    "generated",
+    "veo",
+    "candidate",
+    "8s"
+  ],
+  "notes": "Sabra World Intro v1 visual candidate. Official logo and Sabra music intentionally reserved for deterministic post-production after visual approval.",
+  "generation": {
+    "provider": "veo",
+    "model": "veo-3.1-generate-preview",
+    "durationSeconds": 8,
+    "generatedAt": "2026-07-29T20:12:34.428Z",
+    "sceneId": "sabra-world-brand-intro",
+    "shotId": "intro-v1",
+    "prompt": "Create one cinematic 8-second Sabra World brand intro with three balanced beats: first, a warm Egyptian Nile sunrise and palms establishing Sabra's world; second, transition naturally to Sabra in her rustic outdoor kitchen wearing a light beige apron, adding fresh herbs to a steaming clay dish, then looking toward camera with a warm confident smile; third, finish on an elegant dark brown and metallic-gold space with subtle floating spice particles, leaving a clean centered area for the official Sabra World logo to be composited in post-production. Timing: beat one approximately 0-2s, beat two 2-5.5s, beat three 5.5-8s. Maintain Sabra's exact facial identity, apparent age, body proportions and natural Egyptian appearance from CANON references. Her apron is light beige for strong contrast with her black embroidered dress and scarf. Cinematic golden-hour lighting, restrained premium camera movement, realistic anatomy and hands, stable clothing and face, seamless transitions. Do not generate any logo, letters, Arabic text, English text, captions, watermark or fake branding; the official logo and Sabra music will be composited later from exact assets.",
+    "referenceAssetIds": [
+      "sabra-sabra-face-closeup-front-master-v1-4547574d",
+      "sabra-sabra-portrait-45l-master-v1-574ac942",
+      "sabra-sabra-fullbody-turnaround-master-v1-26249822",
+      "sabra-sabra-master-reference-sheet-v1-1-1ec20444",
+      "sabra-sabra-costume-details-master-v1-ebfebbab",
+      "sabra-sabra-expressions-reference-v1-a312bae2",
+      "sabra-sabra-scale-proportions-master-v1-0a57cf64"
+    ]
+  }
+}
