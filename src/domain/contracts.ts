@@ -9,6 +9,12 @@ export type ShotKind =
   | "object"
   | "transition";
 
+/** Cheapest valid production path is preferred; escalate only when the scene requires it. */
+export type ProductionMode = "still" | "motion-still" | "video" | "video-lipsync";
+
+/** Defines which asset determines the final shot duration and edit rhythm. */
+export type TimingDriver = "audio" | "action" | "fixed";
+
 export type ProductionStatus =
   | "planned"
   | "generating"
@@ -35,6 +41,12 @@ export interface ShotSpec {
   eyeContactTarget?: string;
   dialogue?: DialogueLine[];
   continuityFrom?: ShotId;
+  /** Optional operator/story-planner override. Otherwise the router derives the cheapest valid mode. */
+  productionMode?: ProductionMode;
+  /** Audio for narration/dialogue, action for physical sequences, fixed for cards/transitions/etc. */
+  timingDriver?: TimingDriver;
+  /** Explicitly marks dialogue that must be visibly synchronized to the speaker. */
+  lipSyncRequired?: boolean;
   status: ProductionStatus;
 }
 
