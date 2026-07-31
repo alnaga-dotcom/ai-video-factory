@@ -1,14 +1,17 @@
-import type { EpisodeSpec, ShotSpec } from "../domain/contracts.js";
+import type { EpisodeSpec, ProductionMode, ShotSpec, TimingDriver } from "../domain/contracts.js";
 import type { FactoryModelConfig } from "../config/models.js";
 import { selectConfiguredModel } from "../config/models.js";
-import { routeShot } from "../routing/model-router.js";
+import { routeShot, type ModelTier } from "../routing/model-router.js";
 
 export interface DryRunShot {
   shotId: string;
   durationSeconds: number;
-  tier: "premium" | "fast";
-  provider: string;
-  model: string;
+  productionMode: ProductionMode;
+  timingDriver: TimingDriver;
+  requiresVideoGeneration: boolean;
+  tier: ModelTier | null;
+  provider: string | null;
+  model: string | null;
   routeReason: string;
   estimatedCredits: number | null;
   prompt: string;
@@ -24,7 +27,8 @@ export interface DryRunReport {
 
 export function buildProductionDryRun(episode: EpisodeSpec, models: FactoryModelConfig): DryRunReport {
   const shots = episode.scenes.flatMap((scene) => scene.shots.map((shot) => planShot(shot, scene.location, scene.timeOfDay, models)));
-  const costs = shots.map((shot) => shot.estimatedCredits);
+  const paidShots = shots.filter((shot) => shot.requiresVideoGeneration);
+  const costs = paidShots.map((shot) => shot.estimatedCredits);
   return {
     episodeId: episode.id,
     shotCount: shots.length,
@@ -36,10 +40,30 @@ export function buildProductionDryRun(episode: EpisodeSpec, models: FactoryModel
 
 function planShot(shot: ShotSpec, location: string, timeOfDay: string | undefined, models: FactoryModelConfig): DryRunShot {
   const route = routeShot(shot);
+
+  if (!route.requiresVideoGeneration || !route.tier) {
+    return {
+      shotId: shot.id,
+      durationSeconds: shot.durationSeconds,
+      productionMode: route.mode,
+      timingDriver: route.timingDriver,
+      requiresVideoGeneration: false,
+      tier: null,
+      provider: null,
+      model: null,
+      routeReason: route.reason,
+      estimatedCredits: 0,
+      prompt: buildShotPrompt(shot, location, timeOfDay),
+    };
+  }
+
   const model = selectConfiguredModel(models, route.tier, shot.durationSeconds);
   return {
     shotId: shot.id,
     durationSeconds: shot.durationSeconds,
+    productionMode: route.mode,
+    timingDriver: route.timingDriver,
+    requiresVideoGeneration: true,
     tier: route.tier,
     provider: model.provider,
     model: model.model,
